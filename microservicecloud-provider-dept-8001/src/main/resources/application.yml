@@ -1,6 +1,9 @@
 server:
   port: 8001
-
+#日志输出配置
+log:
+  level: debug #日志级别
+  path: /logs/task/task.log # 最前面加/为绝对路径
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.alicyu.springcloud.entities    # 所有Entity别名类所在包
@@ -15,7 +18,7 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
     url: jdbc:mysql://localhost:3306/clouddb01              # 数据库名称
     username: root
-    password: root
+    password: zhicheng
     dbcp2:
       min-idle: 5                                           # 数据库连接池的最小维持连接数
       initial-size: 5                                       # 初始化连接数
