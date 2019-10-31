@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
- * @author Alicyu
+ * @author zph
  * @classname DeptDao
  * @description TODO
  * @date 2019/9/8 10:28

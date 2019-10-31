@@ -10,7 +10,7 @@ import java.util.List;
 
 
 /**
- * @author Alicyu
+ * @author zph
  * @classname RandomRule_ZY
  * @description TODO
  * @date 2019/9/4 23:02

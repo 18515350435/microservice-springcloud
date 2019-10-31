@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author Alicyu
+ * @author zph
  * @classname ConfigClient_3355_StartSpringCloudA
  * @description TODO
  * @date 2019/9/6 16:27

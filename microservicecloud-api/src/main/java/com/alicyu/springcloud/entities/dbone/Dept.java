@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 
 /**
- * @author Alicyu
+ * @author zph
  * @classname Dept
  * @description TODO
  * @date 2019/9/4 20:23

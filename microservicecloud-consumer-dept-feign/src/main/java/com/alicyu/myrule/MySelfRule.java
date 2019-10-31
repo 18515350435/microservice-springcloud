@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author Alicyu
+ * @author zph
  * @classname MySelfRule
  * @description TODO
  * @date 2019/9/4 22:58

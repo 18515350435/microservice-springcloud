@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author Alicyu
+ * @author zph
  * @classname ConfigClientRest
  * @description TODO
  * @date 2019/9/6 16:24
