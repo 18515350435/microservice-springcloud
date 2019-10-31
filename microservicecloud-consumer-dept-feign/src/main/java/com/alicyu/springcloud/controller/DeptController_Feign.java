@@ -1,6 +1,6 @@
 package com.alicyu.springcloud.controller;
 
-import com.alicyu.springcloud.entities.Dept;
+import com.alicyu.springcloud.entities.dbone.Dept;
 import com.alicyu.springcloud.service.DeptClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

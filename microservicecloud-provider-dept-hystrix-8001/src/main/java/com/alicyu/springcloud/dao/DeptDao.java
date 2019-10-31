@@ -1,6 +1,6 @@
 package com.alicyu.springcloud.dao;
 
-import com.alicyu.springcloud.entities.Dept;
+import com.alicyu.springcloud.entities.dbone.Dept;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

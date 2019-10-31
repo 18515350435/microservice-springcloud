@@ -1,6 +1,7 @@
 package com.alicyu.springcloud.controller;
 
-import com.alicyu.springcloud.entities.Dept;
+import com.alicyu.springcloud.entities.dbone.Dept;
+import com.alicyu.springcloud.entities.dbone.Depttwo;
 import com.alicyu.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -31,6 +32,15 @@ public class DeptController {
     @RequestMapping(value="/dept/get/{id}",method=RequestMethod.GET)
     public Dept get(@PathVariable("id") Long id){
         return service.get(id);
+    }
+
+    @RequestMapping(value="/dept/get2/{id}",method=RequestMethod.GET)
+    public Depttwo get2(@PathVariable("id") Long id){
+        return service.getdepttwo(id);
+    }
+    @RequestMapping(value="/dept/get22/{id}",method=RequestMethod.GET)
+    public com.alicyu.springcloud.entities.dbtwo.Depttwo get22(@PathVariable("id") Long id){
+        return service.getdepttwo2(id);
     }
 
     @RequestMapping(value="/dept/list",method=RequestMethod.GET)

@@ -1,11 +1,9 @@
 package com.alicyu.springcloud.controller;
 
-import com.alicyu.springcloud.entities.Dept;
+import com.alicyu.springcloud.entities.dbone.Dept;
 import com.alicyu.springcloud.service.DeptService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

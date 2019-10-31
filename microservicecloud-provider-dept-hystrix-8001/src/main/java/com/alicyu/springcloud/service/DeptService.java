@@ -1,6 +1,6 @@
 package com.alicyu.springcloud.service;
 
-import com.alicyu.springcloud.entities.Dept;
+import com.alicyu.springcloud.entities.dbone.Dept;
 
 import java.util.List;
 

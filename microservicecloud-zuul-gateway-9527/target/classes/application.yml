@@ -17,8 +17,8 @@ eureka:
 info:
   app.name: alicyu-microcloud
   company.name: www.alicyu.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: microservicecloud-zuul-gateway-9527
+  build.version: 0.0.1-SNAPSHOT
 
 zuul:
   # 设置统一公共前缀

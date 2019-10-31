@@ -1,4 +1,4 @@
-package com.alicyu.springcloud.entities;
+package com.alicyu.springcloud.entities.dbone;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

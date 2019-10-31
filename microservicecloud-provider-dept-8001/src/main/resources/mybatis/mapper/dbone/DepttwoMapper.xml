@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alicyu.springcloud.dao.dbone.DepttwoMapper">
+  <resultMap id="BaseResultMap" type="com.alicyu.springcloud.entities.dbone.Depttwo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="deptno" jdbcType="BIGINT" property="deptno" />
+    <result column="dname" jdbcType="VARCHAR" property="dname" />
+    <result column="db_source" jdbcType="VARCHAR" property="dbSource" />
+  </resultMap>
+</mapper>
