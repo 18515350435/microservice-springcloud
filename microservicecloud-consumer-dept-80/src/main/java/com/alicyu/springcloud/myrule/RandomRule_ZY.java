@@ -1,4 +1,4 @@
-package com.alicyu.myrule;
+package com.alicyu.springcloud.myrule;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;

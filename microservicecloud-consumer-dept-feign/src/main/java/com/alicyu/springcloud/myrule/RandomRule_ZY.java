@@ -1,4 +1,4 @@
-package com.alicyu.myrule;
+package com.alicyu.springcloud.myrule;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;
@@ -15,7 +15,6 @@ import java.util.List;
  * @description TODO
  * @date 2019/9/4 23:02
  */
-@Configuration
 public class RandomRule_ZY extends AbstractLoadBalancerRule{
     private int total = 0;    //总共被调用的次数，目前要求每台被调用5次
     private int currentIndex = 0;//当前提供服务的机器号

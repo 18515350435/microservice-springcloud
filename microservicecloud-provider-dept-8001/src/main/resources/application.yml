@@ -4,6 +4,7 @@ server:
 log:
   level: debug #日志级别
   path: /logs/task/task.log # 最前面加/为绝对路径
+#因为继承了base模块，base中有了DataSourceOneConfig.java声明的配置替换了下边的mybatis配置
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.alicyu.springcloud.entities    # 所有Entity别名类所在包
