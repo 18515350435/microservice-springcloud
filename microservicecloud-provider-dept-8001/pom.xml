@@ -73,7 +73,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <!-- actuator监控信息完善 -->
+        <!-- actuator监控信息完善 hystrix-dashboard使用的就是监控的信息，所以服务要被hystrix-dashboard监控需要引入此模块-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

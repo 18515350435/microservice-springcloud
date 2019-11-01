@@ -22,7 +22,7 @@
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
         </dependency>
-        <!--添加feign支持-->
+        <!--添加feign支持 feign中有对ribbon和hystrix的整合无需额外引入二者-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
@@ -31,6 +31,18 @@
             <groupId>javax.persistence</groupId>
             <artifactId>persistence-api</artifactId>
             <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+        </dependency>
+        <!--使用HttpClient,feign默认发送Request请求以及接收Response响应都是由HttpURLConnection来实现
+            使用默认的偶尔会出现一些兼容问题，所以引入feign-httpclient，检测引入后会自动使用
+        -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>9.4.0</version>
         </dependency>
     </dependencies>
 

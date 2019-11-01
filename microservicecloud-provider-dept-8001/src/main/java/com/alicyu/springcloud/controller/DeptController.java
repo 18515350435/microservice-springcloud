@@ -8,6 +8,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -30,7 +31,7 @@ public class DeptController {
     }
 
     @RequestMapping(value="/dept/get/{id}",method=RequestMethod.GET)
-    public Dept get(@PathVariable("id") Long id){
+    public Dept get(@PathVariable("id") Long id,HttpServletRequest request){
         return service.get(id);
     }
 

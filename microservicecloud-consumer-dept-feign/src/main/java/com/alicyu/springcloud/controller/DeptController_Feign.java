@@ -3,9 +3,7 @@ package com.alicyu.springcloud.controller;
 import com.alicyu.springcloud.entities.dbone.Dept;
 import com.alicyu.springcloud.service.DeptClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +21,11 @@ public class DeptController_Feign {
 
     @RequestMapping(value = "/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id)
+    {
+        return this.service.get(id);
+    }
+    @RequestMapping(value = "/consumer/dept/getnew",method= RequestMethod.GET)
+    public Dept getnew(@RequestParam Long id, @RequestParam String aaa)
     {
         return this.service.get(id);
     }

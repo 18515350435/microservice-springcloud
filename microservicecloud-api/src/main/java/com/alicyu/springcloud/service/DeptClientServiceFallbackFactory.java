@@ -13,7 +13,7 @@ import java.util.List;
  * @date 2019/9/5 16:43
  */
 @Component
-public class DeptClientServiceFallbackFactory implements FallbackFactory {
+public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptClientService> {
 
     @Override
     public DeptClientService create(Throwable throwable) {

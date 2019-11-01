@@ -2,11 +2,18 @@ server:
   port: 80
 
 feign:
-  hystrix:
+  httpclient:
     enabled: true
-
+  hystrix:
+    enabled: true #启动断路器
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE #只有使用这种策略才能拿到线程绑定的request，进而拿取head中的token等信息
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: false #false表示不向注册中心注册自己。但是在大多数的应用场景中都是即向注册中心注册自己的服务又从注册中心拿取服务
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/  #用于注册服务和查询服务

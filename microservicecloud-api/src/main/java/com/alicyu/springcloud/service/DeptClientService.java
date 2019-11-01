@@ -1,5 +1,6 @@
 package com.alicyu.springcloud.service;
 
+import com.alicyu.springcloud.config.FeignConfiguration;
 import com.alicyu.springcloud.entities.dbone.Dept;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +15,7 @@ import java.util.List;
  * @description TODO
  * @date 2019/9/5 9:53
  */
-@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)
+@FeignClient(configuration = FeignConfiguration.class,value = "MICROSERVICECLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
     @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET)
     public Dept get(@PathVariable("id") long id);
