@@ -18,7 +18,7 @@
             <artifactId>microservicecloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency><!-- 引入自己定义的base通用包，可以使用Dept部门Entity -->
+        <dependency><!-- 引入自己定义的base通用包，可以使用其中的通用配置 -->
             <groupId>com.alicyu.springcloud</groupId>
             <artifactId>microservicecloud-base</artifactId>
             <version>${project.version}</version>

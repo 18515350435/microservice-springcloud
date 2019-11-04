@@ -1,4 +1,4 @@
-package com.alicyu.springcloud.config;
+package com.alicyu.config;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;

@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.alicyu.config.CorsConfig,\
+  com.alicyu.config.CxfConfig,\
+  com.alicyu.config.DataSourceOneConfig,\
+  com.alicyu.config.DataSourceTwoConfig,\
+  com.alicyu.config.RedisConfig,\
+  com.alicyu.config.SwaggerConfig
