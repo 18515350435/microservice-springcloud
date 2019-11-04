@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import tk.mybatis.spring.annotation.MapperScan;
 
 import javax.sql.DataSource;
 import java.io.FileNotFoundException;
