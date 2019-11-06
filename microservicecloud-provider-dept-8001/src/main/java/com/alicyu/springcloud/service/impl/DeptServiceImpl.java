@@ -7,6 +7,7 @@ import com.alicyu.springcloud.entities.dbone.Depttwo;
 import com.alicyu.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -39,6 +40,21 @@ public class DeptServiceImpl implements DeptService {
     public boolean add(Dept dept)
     {
         return dao.addDept(dept);
+    }
+
+    @Transactional//是用了atomikos分布式事务控制，不要在显示的指定事务控制器了
+    @Override
+    public void addBoth()
+    {
+        Dept dept=new Dept();
+        dept.setDeptno(1232311111L);
+        dept.setDname("kaqiu");
+        com.alicyu.springcloud.entities.dbtwo.Depttwo depttwo=new com.alicyu.springcloud.entities.dbtwo.Depttwo();
+        depttwo.setDeptno(1232322222L);
+        depttwo.setDname("kaqiu22");
+        depttwoMapper2.insert(depttwo);//数据源2
+        dao.addDept(dept);//数据源1
+//        int a=1/0;
     }
 
     @Override

@@ -29,6 +29,11 @@ public class DeptController {
     public boolean add(@RequestBody Dept dept){
         return service.add(dept);
     }
+    @RequestMapping(value="/dept/addBoth",method= RequestMethod.GET)
+    public boolean addBoth(){
+         service.addBoth();
+         return true;
+    }
 
     @RequestMapping(value="/dept/get/{id}",method=RequestMethod.GET)
     public Dept get(@PathVariable("id") Long id,HttpServletRequest request){

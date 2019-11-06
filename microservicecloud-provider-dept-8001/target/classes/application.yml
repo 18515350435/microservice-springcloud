@@ -19,27 +19,31 @@ spring:
     mapperxmlDir: classpath:mybatis/mapper/dbone/**/*.xml      #mapper.xml路径
     entityPackage: com.alicyu.springcloud.entities.dbone    #实体包路径
     mybatiscfg: classpath:mybatis/mybatis.cfg.xml      #mapper对应mybatis通用配置文件路径
-    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://localhost:3306/clouddb01?useSSL=false              # 数据库名称
+    url: jdbc:mysql://localhost:3306/clouddb01?useSSL=false
     username: root
     password: zhicheng
-    tomcat:
-      min-idle: 5                                           # 数据库连接池的最小维持连接数
-      max-idle: 50                                          # 数据库连接池的最大维持连接数
-      initial-size: 5                                       # 初始化连接数
-      max-active: 50                                        # 最大活跃数
+    minPoolSize: 3
+    maxPoolSize: 25
+    maxLifetime: 20000
+    borrowConnectionTimeout: 30
+    loginTimeout: 30
+    maintenanceInterval: 60
+    maxIdleTime: 60
   datasource02:
-    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://localhost:3306/clouddb02?useSSL=false              # 数据库名称
+    mapperPackage: com.alicyu.springcloud.dao.dbtwo         #mapper包路径
+    mapperxmlDir: classpath:mybatis/mapper/dbtwo/**/*.xml      #mapper.xml路径
+    entityPackage: com.alicyu.springcloud.entities.dbtwo    #实体包路径
+    mybatiscfg: classpath:mybatis/mybatis.cfg.xml      #mapper对应mybatis通用配置文件路径
+    url: jdbc:mysql://localhost:3306/clouddb02?useSSL=false
     username: root
     password: zhicheng
-    tomcat:
-      min-idle: 5                                           # 数据库连接池的最小维持连接数
-      max-idle: 50                                          # 数据库连接池的最大维持连接数
-      initial-size: 5                                       # 初始化连接数
-      max-active: 50                                        # 最大活跃数
+    minPoolSize: 3
+    maxPoolSize: 25
+    maxLifetime: 20000
+    borrowConnectionTimeout: 30
+    loginTimeout: 30
+    maintenanceInterval: 60
+    maxIdleTime: 60
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:

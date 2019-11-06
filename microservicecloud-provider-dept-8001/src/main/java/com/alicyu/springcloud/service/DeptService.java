@@ -15,6 +15,7 @@ public interface DeptService {
     Depttwo getdepttwo(Long id);
     com.alicyu.springcloud.entities.dbtwo.Depttwo getdepttwo2(Long id);
     public boolean add(Dept dept);
+    void addBoth();
     public Dept    get(Long id);
     public List<Dept> list();
 }
